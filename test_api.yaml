@@ -1,0 +1,18 @@
+test_name: 登录
+
+steps:
+ - request:
+    method: POST
+    url: https://api.tttt.one/rest-v2/login/access_token
+    json:
+        email: bf@qq.com
+        password: bf123456
+
+ - extract:
+    code: [status_code, (.*), 0]
+
+ - validate:
+    equals:
+    断言状态码
+        - 400
+        - $(code)

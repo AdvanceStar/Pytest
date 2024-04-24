@@ -62,7 +62,7 @@ hook最重要的特点是**约定**
 ### hook规则
 使用方法
 1. 被动调用：使用该名称即可使用cmd中使用**pytest**直接调用
-```
+```python
 def pytest_cmdline_main():
     print("i'm hook, which is called by pytest.")
 ```
